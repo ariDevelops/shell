@@ -1,0 +1,34 @@
+#!/bin/bash - 
+
+# local-vars: script to demonstrate local variables
+# the use of local variables are very useful to keep your code secure from 
+# external environment variables.
+# the local nested scope set the variable to be exclusive from outside world
+
+foo=0	# global variable
+
+
+function_1 () { 
+	local foo # <--- variable exclusive to function_1
+		foo="ed"
+		echo "function 1 contains: foo = $foo"
+}
+	
+function_2 () { 
+	local foo # <--- variable exclusive to function_2
+		foo="edd"
+		echo "function 2 contains: foo = $foo"
+}
+	
+function_3 () { 
+	local foo # <--- variable exclusive to function_3
+		foo="eddy"
+		echo "function 3 contains: foo = $foo"
+}
+	
+
+### main block
+echo "global: foo = $foo"
+function_1
+function_2
+function_3

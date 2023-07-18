@@ -1,0 +1,24 @@
+#!/bin/bash - 
+
+# test-string: evalate the value of a string
+
+STRING=maybe
+
+if [ -z "$STRING" ]; then
+	echo "there is no answer." >&2
+	exit 1
+fi
+
+if [ "$STRING" = "yes" ]; then
+	echo "The answer is yes"
+
+ elif [ "$STRING" = "no" ]; then
+	 echo "The answer is no"
+
+  elif [ "$STRING" = "maybe" ]; then
+	 echo "The answer is maybe"
+
+ 	else 
+	  echo "The answer is UNKOWN."
+fi
+

@@ -1,0 +1,14 @@
+### Important: whenever you treat expression via > or < operators 
+### you must check the expressions are quoted. 
+### if not, this can produce several destructive results, for they will be
+### interpreted by the Shell as redirection operators..
+
+"string" 	string is not null 
+-n "string" 	the lenght of the string is greater than zero 
+-z "string" 	the string's lenght is equal zero
+
+"string1" = "string2"  		equal 
+"string1" == "string2"		same thing, but is not POSIX compliant
+"string1" != "string2"		not equal
+"string1" > "string2"		(string1 sorts after string2) greater than
+"string1" < "string2"		(string1 sorts before string2) ess than

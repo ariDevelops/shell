@@ -1,0 +1,22 @@
+#!/bin/bash - 
+
+### POSIX systems share similar ways to handle with Stdio
+### in shell programming we have special variables such $? to check if a command 
+### was successifuly executed evaluing your exit status:
+
+# lrwxrwxrwx 1 root root 15 jul 17 17:14 /dev/stderr -> /proc/self/fd/2
+# lrwxrwxrwx 1 root root 15 jul 17 17:14 /dev/stdin -> /proc/self/fd/0
+# lrwxrwxrwx 1 root root 15 jul 17 17:14 /dev/stdout -> /proc/self/fd/1
+
+# if statments work in the same fashion evaluating internaly the exit status 
+# of conditions and programs, if true returns: 0, and 1 when the expression is false
+
+x=5
+if [ "$x" -eq 5 ]; then
+	echo "x equals $x"
+
+  else 
+	  echo "x does not equal 5."
+
+fi
+
