@@ -1,0 +1,23 @@
+#!/bin/bash 
+### provide an html page with system status information 
+
+
+# variables for later use.. 
+# the option:	declare -r VAR="<data>" is used to set read only variables
+# this is very useful to prevent data loss from that variable in later use ...
+TITLE="Pagina Shellscript from $HOSTNAME"
+BODY="Hello world"
+CURRENT_TIME="$(date +"%x %r %Z")"
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+echo " <html>
+	   <head>	
+		<title>$TITLE</title>
+	   </head>
+	   	<body> 
+		  <h1>$BODY</h1>
+		  <p>$TIMESTAMP</p>
+		</body>
+       </html>"
+       
+

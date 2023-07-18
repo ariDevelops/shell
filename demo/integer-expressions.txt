@@ -1,0 +1,6 @@
+integer -eq integer2 	equal
+integer -ne integer2	not equal
+integer -le integer2 	less or equal
+integer -lt integer2 	less than
+integer -ge integer2	greater or equal
+integer -gt integer2	greater than

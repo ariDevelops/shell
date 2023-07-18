@@ -1,0 +1,32 @@
+#!/bin/bash -
+
+# test-integer: evaluate the value of an integer
+# the [[ ]] is a form of pattern matching here i`ve used common regular expressions
+# but you can place things like: 	VAR=foo.bar 	[[ $FILE == foo.* ]]; 
+
+INT=-5
+
+
+	if [[ "$INT" =~ ^-?[0-9]+$ ]]; then
+
+		if [ "$INT" -eq 0 ]; then
+			echo "INT is zero."
+
+		else
+			if [ "$INT" -lt 0 ]; then 
+				echo "INT is negative"
+			else 
+				echo "INT is positivi"
+			fi
+
+			  if [ $((INT % 2)) -eq 0 ]; then 
+				  echo "INT is even"
+			  else
+				  echo "INT is odd"
+			  fi
+		fi	
+
+	else
+		echo "INT is not an integer" >&2
+		exit 1
+	fi
